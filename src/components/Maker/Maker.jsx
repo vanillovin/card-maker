@@ -12,7 +12,7 @@ const Maker = ({ FileInput, authService, cardRepository }) => {
     {
       id: 1,
       name: 'Ming',
-      company: 'SS',
+      company: 'A',
       theme: 'colorful',
       title: 'Software Engineer',
       email: 'vanillovin@gmail.com',
@@ -22,24 +22,24 @@ const Maker = ({ FileInput, authService, cardRepository }) => {
     },
     {
       id: 2,
-      name: 'Ming2',
-      company: 'S',
-      theme: 'dark',
+      name: 'Haru',
+      company: 'B',
+      theme: 'light',
       title: 'Software Engineer',
-      email: 'vanillovin@gmail.com',
-      message: 'go for it',
-      fileName: 'ming2',
+      email: 'haru@email.com',
+      message: 'mew',
+      fileName: 'haru',
       fileURL: '',
     },
     {
       id: 3,
-      name: 'Ming3',
-      company: 'A',
-      theme: 'light',
+      name: 'Harang',
+      company: 'C',
+      theme: 'dark',
       title: 'Software Engineer',
-      email: 'vanillovin@gmail.com',
-      message: 'go for it',
-      fileName: 'ming3',
+      email: 'harang@email.com',
+      message: 'meow',
+      fileName: 'harang',
       fileURL: '',
     },
   ]);
@@ -48,18 +48,21 @@ const Maker = ({ FileInput, authService, cardRepository }) => {
   const onLogout = () => authService.logout();
 
   useEffect(() => {
-    authService.onAuthChange(user => {
-      if (!user) {
-        navigate('/');
-      }
-    })
+    authService.onAuthChange((user) => {
+      if (!user) navigate('/');
+    });
   }, []);
+
+  const addCard = (card) => {
+    const updated = [...cards, card];
+    setCards(updated);
+  };
 
   return (
     <section className={styles.maker}>
       <Header onLogout={onLogout} />
       <div className={styles.container}>
-        <Editor cards={cards} />
+        <Editor cards={cards} addCard={addCard} />
         <Preview cards={cards} />
       </div>
       <Footer />

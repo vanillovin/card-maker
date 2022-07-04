@@ -1,9 +1,10 @@
 @value makerBlack: black;
 @value makerWhite: white;
 @value makerLightGrey: #e8e7e6;
-@value makerLightPink: #ffeae8;
+@value makerLightPink: #FBC5C5;
 @value makerGrey: #626262;
-@value makerGreen: #385461;
+@value makerGreen: #377D71;
+@value makerPurple: #8879B0;
 @value makerPink: pink;
 @value makerShadow: rgba(217, 217, 217, 1);
 @value makerColorful: linear-gradient(166deg, rgba(237, 193, 211, 1) 0%,rgba(212, 149, 161, 1) 60%, rgba(162, 63, 63, 1) 100%, rgba(127, 188, 242, 1) 100%);

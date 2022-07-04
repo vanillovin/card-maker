@@ -1,11 +1,6 @@
-import React, { memo, useRef, useState } from 'react';
+import React from 'react';
 import styles from './ImageFileInput.module.css';
 
-const ImageFileInput = memo(() => {
-  return (
-    <div className={styles.container}>
-    </div>
-  );
-});
+const ImageFileInput = (props) => <button>Image</button>;
 
 export default ImageFileInput;

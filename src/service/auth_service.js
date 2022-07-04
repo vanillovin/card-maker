@@ -12,6 +12,7 @@ class AuthService {
     this.githubProvider = new GithubAuthProvider();
   }
 
+  // try unit testing
   login(providerName) {
     const authProvider = this.getProvider(providerName);
     return signInWithPopup(this.firebaseAuth, authProvider);

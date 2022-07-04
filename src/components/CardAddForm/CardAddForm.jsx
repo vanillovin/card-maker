@@ -1,8 +1,9 @@
-import React, { memo, useRef, useState } from 'react';
+import React, { useRef } from 'react';
 import styles from './CardAddForm.module.css';
-import Button from '../button/button';
+import Button from '../Button/Button';
+import ImageFileInput from '../ImageFileInput/ImageFileInput';
 
-const CardAddForm = memo(({ FileInput, onAdd }) => {
+const CardAddForm = ({ onAdd }) => {
   const formRef = useRef();
   const nameRef = useRef();
   const companyRef = useRef();
@@ -10,17 +11,9 @@ const CardAddForm = memo(({ FileInput, onAdd }) => {
   const titleRef = useRef();
   const emailRef = useRef();
   const messageRef = useRef();
-  const [file, setFile] = useState({ fileName: null, fileURL: null });
 
-  const onFileChange = file => {
-    console.log(file);
-    setFile({
-      fileName: file.name,
-      fileURL: file.url,
-    });
-  };
-
-  const onSubmit = event => {
+  const onSubmit = (event) => {
+    console.log(event);
     event.preventDefault();
     const card = {
       id: Date.now(), //uuid
@@ -30,11 +23,10 @@ const CardAddForm = memo(({ FileInput, onAdd }) => {
       title: titleRef.current.value || '',
       email: emailRef.current.value || '',
       message: messageRef.current.value || '',
-      fileName: file.fileName || '',
-      fileURL: file.fileURL || '',
+      fileName: '',
+      fileURL: '',
     };
     formRef.current.reset();
-    setFile({ fileName: null, fileURL: null });
     onAdd(card);
   };
   return (
@@ -84,10 +76,11 @@ const CardAddForm = memo(({ FileInput, onAdd }) => {
         placeholder="Message"
       />
       <div className={styles.fileInput}>
-        <FileInput name={file.fileName} onFileChange={onFileChange} />
+        <ImageFileInput />
       </div>
       <Button name="Add" onClick={onSubmit} />
     </form>
   );
-});
+};
+
 export default CardAddForm;

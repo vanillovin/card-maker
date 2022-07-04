@@ -11,8 +11,4 @@ const root = createRoot(container);
 
 const authService = new AuthService(firebaseApp);
 
-root.render(
-  <App
-    authService={authService}
-  />
-);
+root.render(<App authService={authService} />);

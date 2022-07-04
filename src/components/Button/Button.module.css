@@ -1,13 +1,16 @@
-@value makerWhite, makerGreen from '../../common/colors.css';
+@value makerWhite, makerPurple from '../../common/colors.css';
 
 .button {
-  background-color: makerGreen;
+  background-color: makerPurple;
   color: makerWhite;
   font-weight: bold;
   cursor: pointer;
   padding: 0.5em;
   flex: 1 1 50%;
   font-size: 0.8rem;
+  border: none;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
 }
 
 .button:hover {
