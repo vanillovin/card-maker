@@ -8,9 +8,9 @@ import Preview from '../Preview/Preview';
 import styles from './Maker.module.css';
 
 const Maker = ({ FileInput, authService, cardRepository }) => {
-  const [cards, setCards] = useState([
-    {
-      id: 1,
+  const [cards, setCards] = useState({
+    1: {
+      id: '1',
       name: 'Ming',
       company: 'A',
       theme: 'colorful',
@@ -20,29 +20,30 @@ const Maker = ({ FileInput, authService, cardRepository }) => {
       fileName: 'ming',
       fileURL: '',
     },
-    {
-      id: 2,
+    2: {
+      id: '2',
       name: 'Haru',
       company: 'B',
       theme: 'light',
-      title: 'Software Engineer',
+      title: 'pcat',
       email: 'haru@email.com',
       message: 'mew',
       fileName: 'haru',
       fileURL: '',
     },
-    {
-      id: 3,
+    3: {
+      id: '3',
       name: 'Harang',
       company: 'C',
       theme: 'dark',
-      title: 'Software Engineer',
+      title: 'ccat',
       email: 'harang@email.com',
       message: 'meow',
       fileName: 'harang',
       fileURL: '',
     },
-  ]);
+  });
+
   const navigate = useNavigate();
 
   const onLogout = () => authService.logout();
@@ -53,16 +54,32 @@ const Maker = ({ FileInput, authService, cardRepository }) => {
     });
   }, []);
 
-  const addCard = (card) => {
-    const updated = [...cards, card];
-    setCards(updated);
+  const createOrUpdateCard = (card) => {
+    setCards((cards) => {
+      const updated = { ...cards };
+      updated[card.id] = card;
+      return updated;
+    });
+  };
+
+  const deleteCard = (card) => {
+    setCards((cards) => {
+      const updated = { ...cards };
+      delete updated[card.id];
+      return updated;
+    });
   };
 
   return (
     <section className={styles.maker}>
       <Header onLogout={onLogout} />
       <div className={styles.container}>
-        <Editor cards={cards} addCard={addCard} />
+        <Editor
+          cards={cards}
+          addCard={createOrUpdateCard}
+          updateCard={createOrUpdateCard}
+          deleteCard={deleteCard}
+        />
         <Preview cards={cards} />
       </div>
       <Footer />
