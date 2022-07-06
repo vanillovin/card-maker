@@ -61,7 +61,7 @@
   content: '';
   display: block;
   width: 90%;
-  height: 2px;
+  height: 1px;
   background-color: makerWheat;
   transform: translateY(0.5em);
 }
