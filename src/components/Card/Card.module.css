@@ -4,8 +4,8 @@
   display: flex;
   align-items: center;
   width: 100%;
-  border-radius: 1em;
-  margin-bottom: 0.5em;
+  border-radius: 1px;
+  margin-bottom: 1em;
   padding: 0.2em 0;
   background-color: yellow;
   box-shadow: 6px 6px 8px 0px makerShadow;

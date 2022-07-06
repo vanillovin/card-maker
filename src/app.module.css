@@ -1,14 +1,18 @@
-@value makerGrey from  './common/colors.css';
+/* @value makerBlack from  './common/colors.css'; */
 
 * {
   box-sizing: border-box;
 }
 
 .app {
-  width: 100%;
+  width: 100vw;
   height: 100vh;
+  padding: 60px 40px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: makerGrey;
+  background: black;
+  /* background: -webkit-linear-gradient(top left, #efe3d0, #87a8a4);
+  background: -moz-linear-gradient(top left, #efe3d0, #87a8a4);
+  background: linear-gradient(to bottom right, #efe3d0, #87a8a4); */
 }
