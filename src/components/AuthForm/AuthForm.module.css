@@ -1,0 +1,40 @@
+@value makerWhite, makerPurple, makerGrey from '../../common/colors.css';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 0.8rem;
+  padding-bottom: 0;
+}
+
+.authInput {
+  font-size: 0.8rem;
+  border-radius: 1.4rem;
+  border: 1px solid makerGrey;
+  padding: 0.4rem 0.8rem;
+  outline: none;
+  margin-bottom: 0.3rem;
+}
+
+.authSubmit {
+  font-size: 0.9rem;
+  cursor: pointer;
+  color: makerWhite;
+  border: 0;
+  background-color: makerPurple;
+  margin-top: 0.3rem;
+}
+
+.authSubmit:hover {
+  opacity: 0.8;
+  transition: all 0.2s linear;
+}
+
+.authSwitch {
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+
+.authSwitch:hover {
+  text-decoration: underline;
+}

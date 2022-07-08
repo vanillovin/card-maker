@@ -3,6 +3,8 @@ import {
   signInWithPopup,
   GoogleAuthProvider,
   GithubAuthProvider,
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
 } from 'firebase/auth';
 
 class AuthService {
@@ -26,6 +28,14 @@ class AuthService {
     this.firebaseAuth.onAuthStateChanged((user) => {
       onUserChanged(user);
     });
+  }
+
+  emailSignIn(email, password) {
+    return createUserWithEmailAndPassword(this.firebaseAuth, email, password);
+  }
+
+  emailLogin(email, password) {
+    return signInWithEmailAndPassword(this.firebaseAuth, email, password);
   }
 
   getProvider(providerName) {
