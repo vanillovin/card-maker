@@ -3,7 +3,9 @@ import styles from './Footer.module.css';
 
 const Footer = memo(() => (
   <footer className={styles.footer}>
-    <p className={styles.title}>Code your dream</p>
+    <a href="https://github.com/vanillovin/card-maker" className={styles.title}>
+      github @vanillovin
+    </a>
   </footer>
 ));
 
