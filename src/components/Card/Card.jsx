@@ -3,12 +3,15 @@ import styles from './Card.module.css';
 
 const DEFAULT_IMAGE = '/images/default_logo.png';
 
-const Card = memo(({ card }) => {
+const Card = memo(({ card, deleteCard }) => {
   const { name, company, title, email, message, theme, fileName, fileURL } =
     card;
   const url = fileURL || DEFAULT_IMAGE;
   return (
     <li className={`${styles.card} ${getStyles(theme)}`}>
+      <button className={styles.delete} onClick={() => deleteCard(card)}>
+        ✕
+      </button>
       <img className={styles.avatar} src={url} alt="profile" />
       <div className={styles.info}>
         <h1 className={styles.name}>{name}</h1>
