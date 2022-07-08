@@ -6,6 +6,7 @@
   flex-wrap: wrap;
   border-top: 1px solid makerBlack;
   border-left: 1px solid makerBlack;
+  border-right: 1px solid makerBlack;
   margin-bottom: 1em;
 }
 
@@ -19,8 +20,16 @@
   border: 0;
   padding: 0.5em;
   border-bottom: 1px solid makerBlack;
-  border-right: 1px solid makerBlack;
   background: makerWhite;
+}
+
+.input:nth-child(2) {
+  border-left: 1px solid makerBlack;
+  border-right: 1px solid makerBlack;
+}
+
+.input:nth-child(4) {
+  border-right: 1px solid makerBlack;
 }
 
 .input,
@@ -42,4 +51,6 @@
 
 .textarea {
   flex-basis: 100%;
+  min-height: 50px;
+  max-height: 100px;
 }

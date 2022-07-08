@@ -47,6 +47,7 @@ const Maker = ({ FileInput, authService, cardRepository }) => {
   };
 
   const deleteCard = (card) => {
+    if (!window.confirm('카드를 삭제하시겠습니까?')) return;
     setCards((cards) => {
       const updated = { ...cards };
       delete updated[card.id];

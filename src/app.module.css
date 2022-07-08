@@ -1,7 +1,9 @@
 /* @value makerBlack from  './common/colors.css'; */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;500;700;900&display=swap');
 
 * {
   box-sizing: border-box;
+  font-family: 'Noto Sans KR', sans-serif;
 }
 
 .app {
@@ -11,8 +13,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: black;
-  /* background: -webkit-linear-gradient(top left, #efe3d0, #87a8a4);
-  background: -moz-linear-gradient(top left, #efe3d0, #87a8a4);
-  background: linear-gradient(to bottom right, #efe3d0, #87a8a4); */
+  background: #efe3d0;
+  /* background: -webkit-linear-gradient(top left, #efe3d0, #fba1a1);
+  background: -moz-linear-gradient(top left, #efe3d0, #fba1a1);
+  background: linear-gradient(to bottom right, #efe3d0, #fba1a1); */
 }

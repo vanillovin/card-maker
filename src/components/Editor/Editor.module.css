@@ -1,14 +1,15 @@
+@value mediaQuery '../../common/size.css';
 @value makerGreen, makerLightGrey from '../../common/colors.css';
 
 .editor {
   flex-basis: 50%;
   border-right: 1px solid makerLightGrey;
-  padding: 0.5em 2em;
+  padding: 0 2em;
   overflow-y: auto;
 }
 
 .editor::-webkit-scrollbar {
-  width: 10px;
+  width: 8px;
 }
 
 .editor::-webkit-scrollbar-thumb {
@@ -25,8 +26,15 @@
 }
 
 .title {
-  font-size: 1.3rem;
+  font-size: 1.1em;
   width: 100%;
   text-align: center;
   margin-bottom: 1em;
+}
+
+@media screen and (max-width: mediaQuery) {
+  .editor {
+    border-right: 0;
+    border-bottom: 1px solid makerLightGrey;
+  }
 }

@@ -1,4 +1,4 @@
-@value makerLightGrey, makerLightPink, makerPurple from '../../common/colors.css';
+@value makerLightGrey, makerLightPink, makerPink from '../../common/colors.css';
 
 .container {
   width: 100%;
@@ -39,7 +39,7 @@
   height: 1.5em;
   border-radius: 50%;
   border: 3px solid makerLightGrey;
-  border-top: 3px solid makerPurple;
+  border-top: 3px solid makerPink;
   animation: spin 2s linear infinite;
 }
 

@@ -6,26 +6,32 @@
   padding: 0.5em;
   background-color: makerGreen;
   position: relative;
+  user-select: none;
 }
 
 .logo {
-  width: 3em;
+  width: 2.8em;
 }
 
 .title {
   margin: 0;
   color: makerWhite;
+  font-size: 1.3em;
 }
 
 .logout {
   position: absolute;
-  right: 3em;
-  top: 1em;
-  padding: 0.8em;
+  top: 1.6em;
+  right: 2em;
+  padding: 0.6em 0.8em;
   border-radius: 10%;
   background-color: makerBlack;
   color: makerWhite;
   outline: 0;
   border: 0;
   cursor: pointer;
+}
+
+.logout:hover {
+  opacity: 0.8;
 }

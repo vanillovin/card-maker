@@ -77,11 +77,21 @@
   margin-bottom: 1em;
 }
 
-.company::after {
+.card.dark .company::after,
+.card.colorful .company::after {
   content: '';
   display: block;
   width: 90%;
   height: 2px;
   background-color: makerWhite;
+  transform: translateY(0.5em);
+}
+
+.card.light .company::after {
+  content: '';
+  display: block;
+  width: 90%;
+  height: 2px;
+  background-color: makerBlack;
   transform: translateY(0.5em);
 }
