@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "https://vanillovin.github.io/card-maker/static/css/main.4ce03d1b.css",
+    "main.css": "https://vanillovin.github.io/card-maker/static/css/main.c24fb9dd.css",
     "main.js": "https://vanillovin.github.io/card-maker/static/js/main.953fc503.js",
     "index.html": "https://vanillovin.github.io/card-maker/index.html",
-    "main.4ce03d1b.css.map": "https://vanillovin.github.io/card-maker/static/css/main.4ce03d1b.css.map",
+    "main.c24fb9dd.css.map": "https://vanillovin.github.io/card-maker/static/css/main.c24fb9dd.css.map",
     "main.953fc503.js.map": "https://vanillovin.github.io/card-maker/static/js/main.953fc503.js.map"
   },
   "entrypoints": [
-    "static/css/main.4ce03d1b.css",
+    "static/css/main.c24fb9dd.css",
     "static/js/main.953fc503.js"
   ]
 }
