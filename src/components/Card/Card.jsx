@@ -4,8 +4,7 @@ import styles from './Card.module.css';
 const DEFAULT_IMAGE = '/images/default_logo.png';
 
 const Card = memo(({ card, deleteCard }) => {
-  const { name, company, title, email, message, theme, fileName, fileURL } =
-    card;
+  const { name, company, title, email, message, theme, fileURL } = card;
   const url = fileURL || DEFAULT_IMAGE;
   return (
     <li className={`${styles.card} ${getStyles(theme)}`}>

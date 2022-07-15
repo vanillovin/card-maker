@@ -7,7 +7,6 @@ const AuthForm = ({ onSubmit }) => {
     password: '',
   });
   const { email, password } = loginInputs;
-  const [error, setError] = useState('');
   const [newAccount, setNewAccount] = useState(true);
 
   const onChange = ({ target: { name, value } }) =>
@@ -50,7 +49,6 @@ const AuthForm = ({ onSubmit }) => {
           className={`${styles.authInput} ${styles.authSubmit}`}
           value={newAccount ? '가입하기' : '로그인'}
         />
-        {error && <span className={styles.authError}>{error}</span>}
       </form>
       <span onClick={toggleAccount} className={styles.authSwitch}>
         {newAccount ? '로그인하러 가기' : '이메일로 가입하기'}

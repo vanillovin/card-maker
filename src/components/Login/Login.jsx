@@ -1,9 +1,5 @@
 import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import {
-  createUserWithEmailAndPassword,
-  signInWithEmailAndPassword,
-} from 'firebase/auth';
 import AuthForm from '../AuthForm/AuthForm';
 import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
