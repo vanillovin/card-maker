@@ -93,6 +93,6 @@ const CardEditForm = memo(({ FileInput, card, updateCard, deleteCard }) => {
       <Button name="Delete" onClick={onSubmit} />
     </form>
   );
-};)
+});
 
 export default CardEditForm;
