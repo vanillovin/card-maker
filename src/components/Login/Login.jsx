@@ -29,10 +29,8 @@ const Login = ({ authService }) => {
       let data;
       if (newAccount) {
         data = await authService.emailSignIn(email, password);
-        console.log('create newAccount data', data);
       } else {
         data = await authService.emailLogin(email, password);
-        console.log('log in data', data);
       }
       goToMaker(data.user.uid);
     } catch (error) {
