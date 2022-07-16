@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { HashRouter, Route, Routes } from 'react-router-dom';
 import styles from './app.module.css';
 import Login from './components/Login/Login';
 import Maker from './components/Maker/Maker';
@@ -7,7 +7,7 @@ import Maker from './components/Maker/Maker';
 function App({ FileInput, authService, cardRepository }) {
   return (
     <div className={styles.app}>
-      <BrowserRouter basename={process.env.PUBLIC_URL}>
+      <HashRouter basename="/">
         <Routes>
           <Route path="/" element={<Login authService={authService} />} />
           <Route
@@ -21,7 +21,7 @@ function App({ FileInput, authService, cardRepository }) {
             }
           />
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </div>
   );
 }
